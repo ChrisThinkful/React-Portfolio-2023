@@ -90,7 +90,10 @@
 .skills {
   ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style-type: none;
+    margin-top: 2rem;
     li {
       display: flex;
       align-items: center;

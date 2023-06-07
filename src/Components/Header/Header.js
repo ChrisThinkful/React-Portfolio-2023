@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header>
       <nav>
-        <ul className="header-nav">
+        <ul className="header-nav left">
           <li style={{ margin: "0 1rem 0 2rem" }}>
             <Link className="nav-link" underline="none" href="#home">
               Home
@@ -36,7 +36,7 @@ const Header = () => {
         </ul>
       </nav>
       <nav>
-        <ul className="header-nav">
+        <ul className="header-nav right">
           <li style={{ margin: "1rem" }}>
             <Link
               className="nav-link"
