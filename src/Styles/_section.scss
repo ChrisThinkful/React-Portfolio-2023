@@ -1,0 +1,43 @@
+@use "./Global/variables" as *;
+@use "./Global/colors" as *;
+@use "./Global/typhography" as *;
+
+@mixin title {
+  .section-title {
+    font-size: $heading;
+    margin-bottom: 2rem;
+
+    .light & {
+      color: $header-color;
+    }
+
+    .dark & {
+      color: $dark-header-color;
+    }
+    @media (max-width: 800px) {
+      text-align: center;
+    }
+  }
+}
+
+@mixin section-base {
+  position: relative;
+  min-height: 100vh;
+  padding-top: $header-height;
+  margin: auto;
+  justify-content: center;
+  @include title;
+
+  .light & {
+    background-color: $background-color;
+  }
+
+  .dark & {
+    background-color: $dark-background-color;
+  }
+}
+
+@mixin offset {
+  margin-top: $header-height * -1;
+}
+

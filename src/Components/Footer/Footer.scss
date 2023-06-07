@@ -1,0 +1,35 @@
+@use "../../Styles/Global/colors" as *;
+@use "../../Styles/Global/typhography" as *;
+
+.footer {
+  position: relative;
+  font-size: $body;
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+  z-index: 100;
+  .light & {
+    background-color: $blackish;
+    color: white;
+  }
+
+  .dark & {
+    color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+  }
+}
+
+.footer-socials {
+  display: flex;
+  gap: 0.5rem;
+  a {
+    text-decoration: none;
+    color: white;
+    gap: 1rem;
+    transition: color 0.2s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      color: $header-color;
+    }
+  }
+}

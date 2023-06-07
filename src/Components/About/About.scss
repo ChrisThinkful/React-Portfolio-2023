@@ -1,0 +1,45 @@
+@use "../../Styles/section" as *;
+@use "../../Styles/Global/colors" as *;
+@use "../../Styles/Global/typhography" as *;
+
+.about-section {
+  @include section-base;
+  display: flex;
+  align-items: center;
+}
+
+.about-content {
+  width: 70%;
+}
+
+.about-body {
+  display: flex;
+  gap: 3rem;
+  font-size: $body;
+  align-items: center;
+  .light & {
+    color: $text-color;
+  }
+  .dark & {
+    color: $dark-text-color;
+  }
+}
+
+.about-image {
+  height: 337px;
+  border-radius: 2rem;
+}
+
+.about-text {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 850px) {
+  .about-body {
+    flex-direction: column;
+  }
+}

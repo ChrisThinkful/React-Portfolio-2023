@@ -1,0 +1,108 @@
+@use "../../Styles/section" as *;
+@use "../../Styles/Global/colors" as *;
+@use "../../Styles/Global/typhography" as *;
+
+.contact-section {
+  @include section-base;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-content {
+  width: 70%;
+}
+
+.subtitle {
+  font-size: 2rem;
+  font-weight: bold;
+  .light & {
+    color: $blackish;
+  }
+  .dark & {
+    color: $dark-blackish;
+  }
+  @media (max-width: 800px) {
+    text-align: center;
+  }
+}
+
+.contact-body {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+  font-size: $body;
+  .light & {
+    color: $text-color;
+  }
+  .dark & {
+    color: $dark-text-color;
+  }
+}
+
+.action-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  .light & {
+    color: $text-color;
+  }
+
+  .dark & {
+    color: $dark-text-color;
+  }
+
+  &:hover {
+    .action-thumb {
+      .light & {
+        animation: light-box-shadow 0.5s ease forwards;
+      }
+      .dark & {
+        animation: dark-box-shadow 0.5s ease forwards;
+      }
+    }
+  }
+}
+
+.action-thumb {
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+
+  .light & {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  .dark & {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+}
+
+@keyframes light-box-shadow {
+  from {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  to {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+}
+
+@keyframes dark-box-shadow {
+  from {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  to {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  }
+}
+
+@media (max-width: 850px) {
+  .contact-body {
+    flex-direction: column;
+  }
+  .action-item {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+}

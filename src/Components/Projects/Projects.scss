@@ -1,0 +1,45 @@
+@use "../../Styles/section" as *;
+@use "../../Styles/Global/colors" as *;
+@use "../../Styles/Global/typhography" as *;
+
+.project-section {
+  @include section-base;
+  display: flex;
+  align-items: center;
+}
+
+.projects-content {
+  width: 70%;
+}
+
+.disclaimer {
+  color: red;
+}
+
+.project-cards {
+  margin: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  .card {
+    flex: 1 0 21%;
+    margin: 0.5em;
+
+    @media (max-width: 767px) {
+      flex: 1 0 46%;
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      flex: 1 0 31%;
+    }
+
+    @media (min-width: 1025px) {
+      flex: 1 0 21%;
+    }
+  }
+}
+
+.project-card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
