@@ -15,7 +15,7 @@ function Layout() {
   useEffect(() => {
     axios.get('https://www.codewars.com/api/v1/users/ChrisThinkful')
       .then(response => {
-        console.log(response.data)
+        // console.log(response.data)
         setUserData(response.data);
       })
       .catch(err => console.error('Error: ', err));
