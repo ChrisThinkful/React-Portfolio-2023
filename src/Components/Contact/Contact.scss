@@ -20,7 +20,7 @@
     color: $blackish;
   }
   .dark & {
-    color: $dark-blackish;
+    color: $darkMode-blackish;
   }
   @media (max-width: 800px) {
     text-align: center;
@@ -36,7 +36,7 @@
     color: $text-color;
   }
   .dark & {
-    color: $dark-text-color;
+    color: $darkMode-text-color;
   }
 }
 
@@ -50,7 +50,7 @@
   }
 
   .dark & {
-    color: $dark-text-color;
+    color: $darkMode-text-color;
   }
 
   &:hover {

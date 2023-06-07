@@ -35,7 +35,7 @@
   }
 
   .dark & {
-    color: $dark-blackish;
+    color: $darkMode-blackish;
   }
 }
 
@@ -46,7 +46,7 @@
     color: $text-color;
   }
   .dark & {
-    color: $dark-text-color;
+    color: $darkMode-text-color;
   }
 }
 

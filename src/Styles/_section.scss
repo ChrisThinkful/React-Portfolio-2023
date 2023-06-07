@@ -12,7 +12,7 @@
     }
 
     .dark & {
-      color: $dark-header-color;
+      color: $darkMode-header-color;
     }
     @media (max-width: 800px) {
       text-align: center;
@@ -33,7 +33,7 @@
   }
 
   .dark & {
-    background-color: $dark-background-color;
+    background-color: $darkMode-background-color;
   }
 }
 
