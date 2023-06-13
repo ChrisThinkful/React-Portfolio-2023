@@ -7,7 +7,7 @@ const Contact = ({ id }) => {
     <section id={id} className="contact-section offset">
       <article className="contact-content">
         <h2 className="section-title">Contact</h2>
-        <p className="subtitle">I'd love to hear from you!</p>
+        <p className="contact-subtitle">I'd love to hear from you!</p>
         <div className="contact-body">
           <div className="linkedin-contact">
             <a

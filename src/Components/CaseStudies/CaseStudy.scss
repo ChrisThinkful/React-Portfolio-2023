@@ -1,0 +1,160 @@
+@use "../../Styles/section" as *;
+@use "../../Styles/Global/colors" as *;
+@use "../../Styles/Global/typhography" as *;
+
+.case-study-section {
+  @include section-base;
+  display: flex;
+  align-items: center;
+}
+
+.case-study-content {
+  width: 70%;
+}
+
+.case-study-body {
+  display: flex;
+  gap: 3rem;
+  font-size: $body;
+  align-items: center;
+  .light & {
+    color: $text-color;
+  }
+  .dark & {
+    color: $darkMode-text-color;
+  }
+}
+.subtitle {
+  font-size: $body;
+  margin-bottom: 2rem;
+  .light & {
+    color: $blackish;
+  }
+  .dark & {
+    color: $darkMode-blackish;
+  }
+}
+
+.case-study {
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  width: 300px;
+}
+
+.case-study-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  .light & {
+    color: $blackish;
+  }
+  .dark & {
+    color: #eeeeee;
+  }
+}
+
+.case-study-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  .light & {
+    color: $blackish;
+  }
+  .dark & {
+    color: $darkMode-blackish;
+  }
+}
+
+.case-study-btn {
+  border: none;
+  border-radius: 0.5rem;
+  width: 10rem;
+  height: 1.75rem;
+  &:hover {
+    cursor: pointer;
+    .light & {
+      background-color: #5d5d5d;
+    }
+    .dark & {
+      background-color: $blackish;
+      color: #ffffff;
+    };
+  };
+  .light & {
+    background-color: $blackish;
+    color: $background-color;
+  }
+  .dark & {
+    background-color: white;
+    color: $blackish;
+  }
+}
+
+.modal {
+  position: fixed; /* Fix the modal to the screen, so it doesn't move with scrolling */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  width: 100vw; /* Take up full viewport width */
+  height: 100vh; /* Take up full viewport height */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+  display: flex; /* To easily center the modal content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  opacity: 0; /* Hidden by default */
+  pointer-events: none; /* To allow clicks on elements beneath the modal */
+  transition: opacity 0.3s ease; /* Transition for showing the modal */
+  z-index: 1;
+}
+
+.modal-content {
+  position: relative; /* Needed for the close button */
+  padding: 20px; /* Padding around the text */
+  border-radius: 10px; /* Rounded corners */
+  max-width: 80%; /* Limit the width */
+  max-height: 80%; /* Limit the height */
+  overflow-y: auto; /* Scroll if the content is too long */
+  .light & {
+    background-color: #eeeeee; /* White background */
+  }
+  .dark & {
+    background-color: #5d5d5d;
+    color: #eeeeee;
+  }
+}
+
+.modal.active {
+  opacity: 1; /* When active, make it fully visible */
+  pointer-events: auto; /* Enable clicks on the modal */
+}
+
+.btn-close {
+  position: absolute;
+  display: inline-block;
+  top: 2rem;
+  right: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 5rem;
+  height: 1.75rem;
+  &:hover {
+    cursor: pointer;
+    .light & {
+      background-color: #5d5d5d;
+    }
+    .dark & {
+      background-color: $blackish;
+      color: #ffffff;
+    };
+  };
+  .light & {
+    background-color: $blackish;
+    color: $background-color;
+  }
+  .dark & {
+    background-color: white;
+    color: $blackish;
+  }
+}

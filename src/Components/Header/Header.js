@@ -22,6 +22,12 @@ const Header = () => {
             <span className="link-bar">&nbsp;</span>
           </li>
           <li style={{ margin: "0 1rem" }}>
+            <Link className="nav-link" underline="none" href="#case-studies">
+              Case Studies
+            </Link>
+            <span className="link-bar">&nbsp;</span>
+          </li>
+          <li style={{ marginRight: "1rem" }}>
             <Link className="nav-link" underline="none" href="#projects">
               Projects
             </Link>
