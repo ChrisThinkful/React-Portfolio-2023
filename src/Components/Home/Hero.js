@@ -32,7 +32,7 @@ const Hero = ({ id }) => {
           <Button
             size="large"
             variant="contained"
-            href="/resume/Chris-Clark-Resume.pdf"
+            href="/resume/Chris_Clark_-_Front_end_Developer.pdf"
             download
             className="resume-btn"
             sx={{
